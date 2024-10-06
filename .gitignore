@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/static/videos/AFTER EFFECTS Y IMOVIE.mp4
+/src/main/resources/static/audios/town-10169.mp3
