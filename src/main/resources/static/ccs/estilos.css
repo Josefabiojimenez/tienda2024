@@ -1,35 +1,45 @@
-/* Selector de ID */
-#tituloPrincipal{
-    color: #9213e8;
+/*Selector de ID*/
+#tituloPrincipal {
+    color:#82cade;
     font-size: 50px;
 }
 
 .parrafoNegrita{
     font-weight: bold;
-    color: darkgreen;
+    color:aquamarine;
 }
 
 .parrafoEspecial{
-    font-family: Comic Sans MS;
-}
-
-.prioridad{
-    color: red;
-}
-
-.prioridad2{
-    color: purple;
+    font-family: ComicSans MS;
 }
 
 .prioridad1{
     color: red;
 }
 
+.prioridad2{
+    color: green;
+}
+
+p{
+    word-spacing: 5px;
+}
+
 .ejemploCajas{
     border: 2px solid black;
-    padding-top: 10px;
-
-    padding: 20px 10px 15px;
+    /*1 parametro aplica los 4 lados*/
+    /*padding-top: 10px;
+    
+    
+    /*2 parametro =top/bottom - left/right*/
+    /*padding:20px 10px;
+    
+    /*3 parametro =top - bottom - left/right*/
+    /*padding:20px 10px 15px;
+ 
+    /*4 parametro= top - bottom - left - right*/
+    padding:20px 10px 15px 30px;
+    margin: 20px 10px 15px 30px;
     width: 50%;
     text-align: center;
     margin: 0 auto;
@@ -38,19 +48,19 @@ a:link{
     color: crimson;
     background-color: aquamarine;
     border: 2px solid aquamarine;
-    margin: 10px;
-
-    border-radius: 25PX;
+    border-radius: 25px;
+        
 }
 a:visited{
-    color: black;
-   
+    color:black;
 }
+
 a:hover{
     color:white;
     background-color: green;
-    transition: 1.5s;
+    transition: 1.5s
 }
+
 a:active{
     color:white;
     background-color: purple;
