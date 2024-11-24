@@ -8,14 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
-@Service /*Esto es esencial para que funcione*/
+@Service
+/*Esto es esencial para que funcione*/
 public class ProductoServiceImpl implements ProductoService {
 
-    @Autowired /*Esto es para importar lo que necesitamos*/
-    private ProductoDao productoDao; /*es privado porque nadie fuera de ella deberia usarlo*/
+    @Autowired
+    /*Esto es para importar lo que necesitamos*/
+    private ProductoDao productoDao;
 
+    /*es privado porque nadie fuera de ella deberia usarlo*/
     @Override
     public List<Producto> getProductos(boolean activos) {
         List<Producto> lista = productoDao.findAll();
@@ -45,5 +46,22 @@ public class ProductoServiceImpl implements ProductoService {
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
+    //Implementamos el metodo que creamos en ProductoService en la linea 23
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup) {
+        return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+     @Override
+    @Transactional(readOnly=true)    
+    public List<Producto> metodoJPQL(double precioInf, double precioSup) {
+        return productoDao.metodoJPQL(precioInf, precioSup);
+    }
+    
+     @Override
+    @Transactional(readOnly=true)    
+    public List<Producto> metodoNativo(double precioInf, double precioSup) {
+        return productoDao.metodoNativo(precioInf, precioSup);
+    }
 }
